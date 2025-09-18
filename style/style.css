@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
+  font-family: 'Arial', sans-serif;
   line-height: 1.6;
   background-color: #fafafa;
   color: #333;
@@ -24,6 +24,10 @@ nav a {
   font-weight: bold;
 }
 
+nav a:hover {
+  text-decoration: underline;
+}
+
 main {
   display: flex;
   justify-content: space-between;
@@ -45,16 +49,17 @@ article {
 
 button {
   margin-top: 10px;
-  background: #ff7043;
+  background: #e64a19;
   color: white;
   border: none;
   padding: 8px 12px;
   border-radius: 5px;
   cursor: pointer;
+  transition: background 0.3s;
 }
 
-button {
-  background: #e64a19;
+button:hover {
+  background: #bf360c;
 }
 
 .extra {
@@ -88,38 +93,20 @@ footer {
   margin-top: 20px;
 }
 
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-    }
-    header, footer {
-      background: #333;
-      color: white;
-      padding: 1rem;
-    }
-    header nav ul, footer nav ul {
-      display: flex;
-      gap: 1rem;
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-    main {
-      display: flex;
-      gap: 2rem;
-      padding: 1rem;
-    }
-    section {
-      flex: 3;
-    }
-    aside {
-      flex: 1;
-      background: #f4f4f4;
-      padding: 1rem;
-    }
-    article {
-      background: #fafafa;
-      padding: 1rem;
-      margin-bottom: 1rem;
-      border: 1px solid #ddd;
-    }
+/* Responsif */
+@media (max-width: 768px) {
+  main {
+    flex-direction: column;
+  }
+
+  aside {
+    order: -1;
+    margin-bottom: 20px;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+}
